@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>작은 행동의 심리학: 마음이 바꾸는 지구</title>
+  <style>
+    /* 🎨 기본 설정 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      background-color: #f8f8f4; /* 아이보리 */
+      color: #333;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 40px;
+      text-align: center;
+      transition: background-color 0.6s ease;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #1e3a5f;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #204b77;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 850px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    /* 💡 색상 섹션 */
+    .home { background-color: #dfeef4; }
+    .about { background-color: #f8f8f4; }
+    .campaign { background-color: #e0f2f1; }
+    .story { background-color: #f0f6fa; }
+    .end { background-color: #e6eceb; }
+
+    /* 🪞 버튼 디자인 */
+    .btn {
+      background-color: #5ba4cf;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #3e89b0;
+    }
+
+    /* 📦 카드 디자인 */
+    .card-container {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 260px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* 🌿 스크롤 애니메이션 */
+    .hidden {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 🔹 상단 네비게이션 (선택적으로 추가) */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(248,248,244,0.9);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1e3a5f;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #5ba4cf;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🧭 네비게이션 -->
+  <nav>
+    <a href="#home">홈</a>
+    <a href="#about">심리학적 관점</a>
+    <a href="#campaign">캠페인</a>
+    <a href="#story">이야기</a>
+    <a href="#end">마무리</a>
+  </nav>
+
+  <!-- 1️⃣ 홈 -->
+  <section id="home" class="home hidden">
+    <h1>작은 행동의 심리학 🌿</h1>
+    <p>지구를 바꾸는 건 거대한 기술이 아니라, 우리의 마음입니다.</p>
+    <p>심리학의 힘으로 환경 행동을 이끌어내는 아이디어를 탐구합니다.</p>
+  </section>
+
+  <!-- 2️⃣ 심리학적 관점 -->
+  <section id="about" class="about hidden">
+    <h2>심리학으로 본 환경 행동</h2>
+    <p>환경 문제는 ‘지식’의 부족이 아니라 ‘심리적 거리감’의 문제입니다.<br>
+      사람들의 감정, 동기, 습관을 바꾸는 접근이 필요합니다.</p>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>확증 편향</h3>
+        <p>자신의 믿음을 강화하는 정보만 받아들여, 환경문제를 과소평가함.</p>
+      </div>
+      <div class="card">
+        <h3>인지 부조화</h3>
+        <p>‘환경을 위해야 한다’는 생각과 실제 행동 사이의 불편함.</p>
+      </div>
+      <div class="card">
+        <h3>심리적 거리감</h3>
+        <p>기후 위기를 ‘미래’나 ‘타지역’의 일로 느끼는 심리.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3️⃣ 캠페인 -->
+  <section id="campaign" class="campaign hidden">
+    <h2>마음을 바꾸는 캠페인</h2>
+    <p>심리학적 원리를 활용해, 친환경 행동을 자연스럽게 이끌어보세요 🌱</p>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>나의 하루 챌린지</h3>
+        <p>매일 작은 친환경 행동을 기록하고 공유하기</p>
+      </div>
+      <div class="card">
+        <h3>에코 포인트</h3>
+        <p>친구와 함께 행동하고 포인트를 쌓아요</p>
+      </div>
+      <div class="card">
+        <h3>지구에게 편지쓰기</h3>
+        <p>공감을 통한 지속적인 행동 동기 부여</p>
+      </div>
+    </div>
+
+    <button class="btn" onclick="joinCampaign()">🌍 참여하기</button>
+  </section>
+
+  <!-- 4️⃣ 스토리 블로그형 -->
+  <section id="story" class="story hidden">
+    <h2>작은 마음이 만든 변화</h2>
+    <p>“내가 뭘 바꿀 수 있을까?”라고 생각했던 한 학생은  
+      하루에 한 번 일회용컵 대신 텀블러를 사용하기 시작했습니다.  
+      그리고 그 행동이 친구들에게 전염되며, 학교 전체가 바뀌기 시작했죠.<br><br>
+      행동의 시작은 작았지만, 마음의 변화는 거대했습니다.</p>
+  </section>
+
+  <!-- 5️⃣ 엔딩 -->
+  <section id="end" class="end hidden">
+    <h2>환경 보호는 마음의 과학입니다 💬</h2>
+    <p>당신의 마음이 변할 때, 지구도 변합니다.</p>
+    <button class="btn" onclick="scrollTo(0,0)">🔝 맨 위로</button>
+  </section>
+
+  <script>
+    // 🔹 스크롤 시 자연스러운 등장
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.hidden').forEach(section => {
+      observer.observe(section);
+    });
+
+    // 🔹 캠페인 참여 버튼
+    function joinCampaign() {
+      alert("참여해주셔서 감사합니다! 🌍 당신의 작은 마음이 지구를 변화시킵니다.");
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>작은 행동의 심리학: 마음이 바꾸는 지구</title>
+  <style>
+    /* 🎨 기본 설정 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      background-color: #f8f8f4; /* 아이보리 */
+      color: #333;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 40px;
+      text-align: center;
+      transition: background-color 0.6s ease;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #1e3a5f;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #204b77;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 850px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    /* 💡 색상 섹션 */
+    .home { background-color: #dfeef4; }
+    .about { background-color: #f8f8f4; }
+    .campaign { background-color: #e0f2f1; }
+    .story { background-color: #f0f6fa; }
+    .end { background-color: #e6eceb; }
+
+    /* 🪞 버튼 디자인 */
+    .btn {
+      background-color: #5ba4cf;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #3e89b0;
+    }
+
+    /* 📦 카드 디자인 */
+    .card-container {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 260px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* 🌿 스크롤 애니메이션 */
+    .hidden {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 🔹 상단 네비게이션 (선택적으로 추가) */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(248,248,244,0.9);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1e3a5f;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #5ba4cf;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🧭 네비게이션 -->
+  <nav>
+    <a href="#home">홈</a>
+    <a href="#about">심리학적 관점</a>
+    <a href="#campaign">캠페인</a>
+    <a href="#story">이야기</a>
+    <a href="#end">마무리</a>
+  </nav>
+
+  <!-- 1️⃣ 홈 -->
+  <section id="home" class="home hidden">
+    <h1>작은 행동의 심리학 🌿</h1>
+    <p>지구를 바꾸는 건 거대한 기술이 아니라, 우리의 마음입니다.</p>
+    <p>심리학의 힘으로 환경 행동을 이끌어내는 아이디어를 탐구합니다.</p>
+  </section>
+
+  <!-- 2️⃣ 심리학적 관점 -->
+  <section id="about" class="about hidden">
+    <h2>심리학으로 본 환경 행동</h2>
+    <p>환경 문제는 ‘지식’의 부족이 아니라 ‘심리적 거리감’의 문제입니다.<br>
+      사람들의 감정, 동기, 습관을 바꾸는 접근이 필요합니다.</p>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>확증 편향</h3>
+        <p>자신의 믿음을 강화하는 정보만 받아들여, 환경문제를 과소평가함.</p>
+      </div>
+      <div class="card">
+        <h3>인지 부조화</h3>
+        <p>‘환경을 위해야 한다’는 생각과 실제 행동 사이의 불편함.</p>
+      </div>
+      <div class="card">
+        <h3>심리적 거리감</h3>
+        <p>기후 위기를 ‘미래’나 ‘타지역’의 일로 느끼는 심리.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3️⃣ 캠페인 -->
+  <section id="campaign" class="campaign hidden">
+    <h2>마음을 바꾸는 캠페인</h2>
+    <p>심리학적 원리를 활용해, 친환경 행동을 자연스럽게 이끌어보세요 🌱</p>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>나의 하루 챌린지</h3>
+        <p>매일 작은 친환경 행동을 기록하고 공유하기</p>
+      </div>
+      <div class="card">
+        <h3>에코 포인트</h3>
+        <p>친구와 함께 행동하고 포인트를 쌓아요</p>
+      </div>
+      <div class="card">
+        <h3>지구에게 편지쓰기</h3>
+        <p>공감을 통한 지속적인 행동 동기 부여</p>
+      </div>
+    </div>
+
+    <button class="btn" onclick="joinCampaign()">🌍 참여하기</button>
+  </section>
+
+  <!-- 4️⃣ 스토리 블로그형 -->
+  <section id="story" class="story hidden">
+    <h2>작은 마음이 만든 변화</h2>
+    <p>“내가 뭘 바꿀 수 있을까?”라고 생각했던 한 학생은  
+      하루에 한 번 일회용컵 대신 텀블러를 사용하기 시작했습니다.  
+      그리고 그 행동이 친구들에게 전염되며, 학교 전체가 바뀌기 시작했죠.<br><br>
+      행동의 시작은 작았지만, 마음의 변화는 거대했습니다.</p>
+  </section>
+
+  <!-- 5️⃣ 엔딩 -->
+  <section id="end" class="end hidden">
+    <h2>환경 보호는 마음의 과학입니다 💬</h2>
+    <p>당신의 마음이 변할 때, 지구도 변합니다.</p>
+    <button class="btn" onclick="scrollTo(0,0)">🔝 맨 위로</button>
+  </section>
+
+  <script>
+    // 🔹 스크롤 시 자연스러운 등장
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.hidden').forEach(section => {
+      observer.observe(section);
+    });
+
+    // 🔹 캠페인 참여 버튼
+    function joinCampaign() {
+      alert("참여해주셔서 감사합니다! 🌍 당신의 작은 마음이 지구를 변화시킵니다.");
+    }
+  </script>
+</body>
+</html>
